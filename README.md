@@ -19,7 +19,7 @@ html
 <head>
 	<meta charset="utf-8">
 	<title>Ajaxify example</title>
-	<script type='text/javascript' src='js/ajaxify.js'>
+	<script type='text/javascript' src='js/ajaxify.js'></script>
 </head>
 <body>
 <form action="/someaction" method="post" id="login-form">
