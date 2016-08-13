@@ -13,7 +13,7 @@ or
 
 #Usage example
 html
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +30,7 @@ html
 </html>
 ```
 Javascript
-```
+```javascript
 // ajaxify uses html form action and method
 ajaxify(document.getElementById('login-form'), {
 	callback: function(data,statusCode) {
@@ -50,7 +50,7 @@ ajaxify(document.getElementById('login-form'), {
 ```
 
 javascript using jquery
-```
+```javascript
 $('#login-form').ajaxify(function(data,statusCode) {
 		// some code after form has been submitted
 		// variable data is json or any text returned from server script
