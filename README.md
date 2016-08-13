@@ -59,3 +59,6 @@ $('#login-form').ajaxify(function(data,statusCode) {
 	// validation must return boolean (true if form can be submited, false if form can not be submitted)
 });
 ```
+
+#Notes
+* note that ajaxify works with multipart/form-data enctype and file uploads too
