@@ -1,0 +1,20 @@
+{
+  "name": "ajaxify",
+  "homepage": "https://github.com/gtabat/Ajaxify",
+  "authors": [
+    "Giorgi Tabatadze"
+  ],
+  "description": "Simple library to send forms by ajax",
+  "main": "src/ajaxify.js",
+  "keywords": [
+    "ajaxify",
+    "form",
+    "send",
+    "by",
+    "ajax",
+    "make",
+    "form",
+    "ajax"
+  ],
+  "license": "MIT"
+}

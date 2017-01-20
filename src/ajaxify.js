@@ -22,7 +22,7 @@ if(typeof jQuery != 'undefined') {
 }
 
 window.ajaxify = function(form,options) {
-    form.onsubmit = function (e) {
+    form.addEventListener('submit', function(e) {
         e.stopPropagation();
         e.preventDefault();
 
@@ -32,9 +32,10 @@ window.ajaxify = function(form,options) {
             }
         }
 
-        var method, action;
+        var method, action, enctype;
         method = form.hasAttribute('method') ? form.getAttribute('method') : 'GET';
         action = form.hasAttribute('action') ? form.getAttribute('action') : '';
+        enctype = form.hasAttribute('enctype') ? form.getAttribute('enctype') : 'application/x-www-form-urlencoded';
 
         var data = null;
 
@@ -45,7 +46,11 @@ window.ajaxify = function(form,options) {
                 action += '?' + functions.serialize(form);
             }
         } else {
-            data = new FormData(form);
+            if(enctype=="multipart/form-data") {
+                data = new FormData(form);
+            } else {
+                data = functions.serialize(form);
+            }
         }
 
         var xhr = new XMLHttpRequest();
@@ -73,9 +78,11 @@ window.ajaxify = function(form,options) {
 
         xhr.open(method.toUpperCase(), action, true);
 
+        xhr.setRequestHeader("Content-Type", enctype);
+
         xhr.send(data);
 
-    }
+    });
 };
 if(typeof jQuery != 'undefined') {
     jQuery.fn.ajaxify = function() {
