@@ -1,7 +1,7 @@
-#Ajaxify
+# Ajaxify
 Javascript library to ajaxify forms (Send form requests as ajax)
 
-#Installation
+# Installation
 This library can be used with jquery or with pure javascript, anyway you just have to copy ajaxify.js or minified javascript file in your project
 ```html
 <script type="text/javascript" src="/path/to/ajaxify.js"></script>
@@ -11,7 +11,7 @@ or
 <script type="text/javascript" src="/path/to/ajaxify.min.js"></script>
 ```
 
-#Usage example
+# Usage example
 html
 ```html
 <!DOCTYPE html>
@@ -60,5 +60,5 @@ $('#login-form').ajaxify(function(data,statusCode) {
 });
 ```
 
-#Notes
+# Notes
 * note that ajaxify works with multipart/form-data enctype and file uploads too
